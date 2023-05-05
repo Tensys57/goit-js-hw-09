@@ -13,7 +13,7 @@ function startHandler() {
   timerId = setInterval(() => {
     refs.body.style.backgroundColor = `${getRandomHexColor()}`;
   }, 1000);
-  // refs.startBtn.setAttribute('disabled', 'true');
+  refs.startBtn.setAttribute('disabled', 'true');
   refs.stopBtn.style.backgroundColor = 'lightyellow';
   refs.startBtn.style.backgroundColor = 'gray';
   // refs.startBtn.removeEventListener('click', startHandler);
@@ -21,7 +21,7 @@ function startHandler() {
 }
 function stopHandler() {
   clearInterval(timerId);
-  // refs.startBtn.setAttribute('disabled', 'false');
+  refs.startBtn.removeAttribute('disabled');
   refs.startBtn.style.backgroundColor = 'lightyellow';
   refs.stopBtn.style.backgroundColor = 'gray';
   // refs.stopBtn.removeEventListener('click', stopHandler);
