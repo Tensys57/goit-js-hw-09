@@ -16,7 +16,6 @@ function startHandler() {
   refs.startBtn.setAttribute('disabled', 'true');
   refs.stopBtn.style.backgroundColor = 'lightyellow';
   refs.startBtn.style.backgroundColor = 'gray';
-  // refs.startBtn.removeEventListener('click', startHandler);
   refs.stopBtn.addEventListener('click', stopHandler);
 }
 function stopHandler() {
@@ -24,7 +23,6 @@ function stopHandler() {
   refs.startBtn.removeAttribute('disabled');
   refs.startBtn.style.backgroundColor = 'lightyellow';
   refs.stopBtn.style.backgroundColor = 'gray';
-  // refs.stopBtn.removeEventListener('click', stopHandler);
   // refs.startBtn.addEventListener('click', startHandler);
 }
 
