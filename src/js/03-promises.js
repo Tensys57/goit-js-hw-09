@@ -33,7 +33,7 @@ function submitHandler(event) {
 }
 
 function createPromise(position, delay) {
-  return (nextPromise = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
     setTimeout(() => {
       if (shouldResolve) {
@@ -42,7 +42,7 @@ function createPromise(position, delay) {
         reject({ position, delay });
       }
     }, delay);
-  }));
+  });
 }
 
 submitFormRef.addEventListener('submit', submitHandler);
